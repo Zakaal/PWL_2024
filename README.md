@@ -1,66 +1,137 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# LAPORAN PRAKTIKUM PWL
+### Nama : Mochammad Zakaro Al Fajri
+### Kelas   : 2F
+### No.absen : 19
+---
+## Jobsheet 2 : ROUTING, CONTROLLER, DAN VIEW
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Praktikum 1 : Basic Routing
+- Buka browser, tuliskan URL untuk memanggil route tersebut: localhost/PWL_2024/public/hello. Perhatikan halaman yang muncul apakah sudah sesuai dan jelaskan pengamatan Anda.
 
-## About Laravel
+    Jawab : Sudah sesuai dengan yang diharapkan. Untuk tampilannya, muncul string "Hello World" sesuai dengan return value pada route /hello. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    ![alt text](Screenshoot/prak1c.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Bukalah pada browser, tuliskan URL untuk memanggil route tersebut: localhost/PWL_2024/public world. Perhatikan halaman yang muncul apakah sudah sesuai dan jelaskan pengamatan Anda.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    Jawab : 
+    Sudah sesuai. Penggunaan http verb berhasil karena dapat menampilkan output sesuai dengan retuen value
+    ![alt text](Screenshoot/prak1e.png)
 
-## Learning Laravel
+- Selanjutnya, cobalah membuat route ’/’ yang menampilkan pesan ‘Selamat Datang’.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    Jawab : 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    ![alt text](Screenshoot/prak1f.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Kemudian buatlah route ‘/about’ yang akan menampilkan NIM dan nama Anda.
+    
+    Jawab : 
+    
+    ![alt text](Screenshoot/prak1g.png)
 
-## Laravel Sponsors
+    hasil
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    ![alt text](Screenshoot/prak1ghasil.png)
 
-### Premium Partners
+### Praktikum 2 : Route Parameters
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- Jalankan kode dengan menuliskan URL untuk memanggil route tersebut: localhost/PWL_2024/public/user NamaAnda. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
 
-## Contributing
+    Jawab : Muncul string dengan tulisan "Nama saya Kaka". Hal tersebut dapat terjadi karena route mengambil parameter {name} dan menampilkan pesan "Nama saya {name}"sesuai dengan inputan di url 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ![alt text](Screenshoot/prak2b.png)
 
-## Code of Conduct
+- Selanjutnya, coba tuliskan URL: localhost/PWL_2024/public/user/. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda. 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    Jawab : muncul error. Hal tersebut dapat terjadi karena route sebelumnya didefinisikan menggunakan parameter {name}, sehingga diperlukan input melalui url sebagai nilai parameter {name}. Karena url tersebut tidak ada inputan menyebabkan request url tidak valid sehingga muncul error
 
-## Security Vulnerabilities
+    ![alt text](Screenshoot/prak2c.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Jalankan kode dengan menuliskan URL untuk memanggil route tersebut: localhost/PWL_2024/public/posts/1/comments/5. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+    
+    Jawab : Muncul String "Pos ke-1 Komentar ke-: 5. Dalam langkah ini digunakan 2 parameter pada route yaitu {posts} dan {comments}. Dengan menggunakan url sebelumnya, Nilai 1 pada URL disematkan pada parameter {posts}, dan nilai 5 disematkan pada parameter {comments}. 
+    ![alt text](Screenshoot/prak2e.png)
 
-## License
+- Kemudian buatlah route /articles/{id} yang akan menampilkan output “Halaman Artikel
+dengan ID {id}”, ganti id sesuai dengan input dari url.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    Jawab : 
+    ![alt text](Screenshoot/prak2f.png)
+    Hasil
+    ![alt text](Screenshoot/prak2fhasil.png)
+
+### Praktikum 3 : Optional Parameters
+
+- Jalankan kode dengan menuliskan URL:localhost/PWL_2024/public/user. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+
+   Jawab : Muncul string "Nama saya". Output seusuai dengan return value route karena tidak disertakannya nilai parameter {name?} yang bersifat opsional pada url,sehingga nilai parameter menjadi null
+   ![alt text](Screenshoot/prak3b.png)
+
+- Selanjutnya tuliskan URL: localhost/PWL_2024/public/user/NamaAnda. Perhatikan
+halaman yang muncul dan jelaskan pengamatan Anda
+
+    Jawab : Muncul string "Nama saya Kaka". Hal tersebut karena nilai parameter sudah diisi sehingga output sesuai dengan nilai parameter.
+
+    ![alt text](Screenshoot/prak3c.png)
+
+- Jalankan kode dengan menuliskan URL: localhost/PWL_2024/public/user/.
+Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+
+    Jawab : Muncul string "Nama saya john". Hal tersebut bisa terjadi karena nilai parameter {name} ditetapkan opsional sehingga bisa diisi ataupun tidak. Nilai default {name} berupa string 'john'. Jika diisi, outputnya akan sesuai dengan niali parameter pada url. Apabila tidak, maka ouputnya akan sesuai dengan nilai default parameter yaitu john.
+    ![alt text](Screenshoot/prak3e.png)
+
+### Praktikum 4 : Membuat Controller
+
+- Buka browser, tuliskan URL untuk memanggil route tersebut:
+localhost/PWL_2024/public/hello. Perhatikan halaman yang muncul dan jelaskan
+pengamatan Anda.
+
+    Jawab : Muncul string "Hello world". Hal tersebut karena dengan penambahan WelcomeController, route akan menggunkana controller tersebut dan juga function yang ada didalamnya yaitu hello. 
+    ![alt text](Screenshoot/prak4e.png)
+
+- Modifikasi kembali implementasi sebelumnya dengan konsep Single Action Controller.Sehingga untuk hasil akhir yang didapatkan akan ada HomeController,AboutController dan ArticleController. Modifikasi juga route yang digunakan.
+
+    Jawab : 
+    
+    HomeController
+    ![alt text](Screenshoot/prak4g1a.png)
+    ![alt text](Screenshoot/prak4g1b.png)
+    ![alt text](Screenshoot/prak4g1c.png)
+    
+    AboutController
+    ![alt text](Screenshoot/prak4g2a.png)
+    ![alt text](Screenshoot/prak4g2b.png)
+    ![alt text](Screenshoot/prak1ghasil.png)
+
+    ArticleController
+    ![alt text](Screenshoot/prak4g3a.png)
+    ![alt text](Screenshoot/prak4g3b.png)
+    ![alt text](Screenshoot/prak2fhasil.png)
+
+### Praktikum 5 : Membuat view
+
+- Jalankan code dengan membuka url localhost/PWL_2024/public/greeting. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+
+    Jawab :
+    Muncul string "Halo, Andi" dengan Heading. Hal tersebut karena penggunaan view pada route greeting.  
+    ![alt text](Screenshoot/prak5c.png)
+
+### Praktikum 6 : View dalam direktori
+- Jalankan code dengan membuka url localhost/PWL_2024/public/greeting. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+
+    Jawab :Output yang muncul adalah string "Hello, Andi". Ini membuktikan view dalam direktori bisa dilakukan. Konsepnya sama saja dengan praktikum 4 langkah c dengan menggunakan dot notation.
+    ![alt text](Screenshoot/prak6d.png)
+
+### Praktikum 7 : Menampilkan view dari controller
+- Jalankan code dengan membuka url localhost/PWL_2024/public/greeting. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+
+  Jawab : Pemanggilan view dari controller dilakukan dengan cara route langsungan melakukan pemanggilan function dari controller.
+  ![alt text](Screenshoot/prak6d.png)
+
+### Praktikum 8 : Meneruskan data ke view
+
+- Jalankan code dengan membuka url localhost/PWL_2024/public/greeting. Perhatikan halaman yang muncul dan jelaskan pengamatan Anda.
+   Jawab : Penggunaan with digunakan untuk menambah kan data invidual ke view dengan cara mengembalikan instance view object
+   ![alt text](Screenshoot/prak8c.png)
+
